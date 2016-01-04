@@ -7,7 +7,7 @@ import {Observable} from "rxjs/Observable";
     changeDetection: ChangeDetectionStrategy.OnPushObserve,
     template: `
         <ul class="message-list">
-            <li class="message-item" *ngFor="#notification of notifications">
+            <li class="message-item" *ngFor="#notification of notifications | async">
                 {{notification.text}}
             </li>
         </ul>

@@ -9,6 +9,8 @@
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
 
+    <script src="node_modules/kuzzle-sdk/node_modules/socket.io-client/socket.io.js"></script>
+
     <!-- 2. Configure SystemJS -->
     <script>
         System.config({
@@ -16,6 +18,12 @@
                 app: {
                     format: 'register',
                     defaultExtension: 'js'
+                }
+            },
+            meta: {
+                'node_modules/kuzzle-sdk/dist/kuzzle.js': {
+                    format: 'global',
+                    export: 'Kuzzle',
                 }
             }
         });
