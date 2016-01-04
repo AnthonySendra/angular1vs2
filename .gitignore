@@ -7,3 +7,4 @@ bower_components
 
 # ignore compiled js
 angular2/app/*.js
+angular2/app/*.js.map
